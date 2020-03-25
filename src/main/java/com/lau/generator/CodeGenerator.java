@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * [描述]
+ * [https://mybatis.plus/config/generator-config.html#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE]
  *
  * @author Yuanquan.Liu
  * @date 2020-03-25
@@ -66,7 +66,7 @@ public class CodeGenerator {
         // 包配置
         PackageConfig pc = new PackageConfig();
         pc.setModuleName(scanner("模块名"));
-        pc.setParent("com.pt.zh.dingtalk");
+        pc.setParent("com.pt.zk.dingtalk");
         mpg.setPackageInfo(pc);
 
         // 自定义配置
