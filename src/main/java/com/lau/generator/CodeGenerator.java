@@ -55,21 +55,26 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:sqlserver://172.16.106.30:1433;DatabaseName=ZKUAT");
+//        dsc.setUrl("jdbc:sqlserver://172.16.106.30:1433;DatabaseName=ZKUAT");
 //        dsc.setSchemaName("dbo");
-//        dsc.setDriverName("com.mysql.jdbc.Driver");
-        dsc.setDriverName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        dsc.setUsername("sa");
-        dsc.setPassword("Welcome123");
+//        dsc.setDriverName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+//        dsc.setUsername("sa");
+//        dsc.setPassword("Welcome123");
+        dsc.setUrl("jdbc:mysql://172.16.234.150:3306/joint_inspecting_d?characterEncoding=utf-8&allowMultiQueries=true");
+        dsc.setDriverName("com.mysql.jdbc.Driver");
+        dsc.setUsername("root");
+        dsc.setPassword("KbBgi@!367U#");
         mpg.setDataSource(dsc);
 
         // 包配置
         PackageConfig pc = new PackageConfig();
         pc.setModuleName(scanner("模块名"));
-        pc.setParent("com.pt.zk.dingtalk");
+        pc.setParent("com.pt.mes.joint.inspecting.modules");
+        pc.setController("web");
         mpg.setPackageInfo(pc);
 
         // 自定义配置
+
         InjectionConfig cfg = new InjectionConfig() {
             @Override
             public void initMap() {
